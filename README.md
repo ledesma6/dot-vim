@@ -7,12 +7,12 @@ A basic vim 8+ configuration.
 
 1. **Clone this repository** (including all submodules) directly into your home folder:
 
-   ```bash
-   git clone --recursive git@github.com:username/dot-vim ~/.vim
+```bash
+git clone --recursive git@github.com:username/dot-vim ~/.vim
 
 ```
 
-2. **Configure your `.vimrc` loading:**
+2. **Configure`vimrc`:**
 If you have an existing `~/.vimrc` file, append this line to source the new configuration:
 ```vim
 source ~/.vim/vimrc
