@@ -1,0 +1,34 @@
+# ==============================================================================
+# Temporary & Runtime Files
+# ==============================================================================
+# Swap files (active editing buffers)
+*.swp
+*.swo
+*.swn
+.*.sw?
+
+# Backup files
+*~
+*.bak
+
+# Persistent undo history files
+*.un~
+undo/
+
+# Session and view state files
+Session.vim
+.netrwhist
+
+# Ctags / Cscope file indexes
+tags
+TAGS
+cscope.*
+
+# ==============================================================================
+# White-listing Core Directories
+# ==============================================================================
+# Ensure key subdirectories are tracked even if empty
+!pack/
+!ftplugin/
+!templates/
+!indent/
