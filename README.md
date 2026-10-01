@@ -55,3 +55,11 @@ rm -rf .git/modules/pack/vendor/start/<plugin-name>
 * [NERDTree](https://github.com/preservim/nerdtree) — Tree explorer plugin for Vim.
 
 ---
+
+## Global Key Mapping and Filetype customization
+Key mappings for common programming tasks are mapped in the included vimrc file. To add custom settings for a language:
+
+1. Using vim, edit a new .vim file in the ftplugin directory.
+
+2. A template will be autoapplied to the buffer.  You can specify commands for builds, linters, tests, and autoformatting just like you would in a terminal.
+
