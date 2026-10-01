@@ -8,7 +8,7 @@ A basic vim 8+ configuration.
 1. **Clone this repository** (including all submodules) directly into your home folder:
 
 ```bash
-git clone --recursive git@github.com:username/dot-vim ~/.vim
+git clone --recursive git@github.com:ledesma6/dot-vim ~/.vim
 
 ```
 
