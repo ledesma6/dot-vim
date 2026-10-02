@@ -50,7 +50,6 @@ function! RunTask(var_name, ...)
 	endif
 endfunction
 
-
 " --- Global Key Mappings ---
 " <Leader>b  -> Build / Compile / Syntax Check
 " <Leader>l  -> Lint / Static Analysis
@@ -64,3 +63,7 @@ nnoremap <Leader>f :call RunTask('formatprg', 0)<CR>
 
 autocmd  BufWinLeave * if &buftype==# 'quickfix' | echo "don't give up, skeleton" | endif
 
+" --- Omni completion settings
+
+" remap Ctrl + Space in Insert mode to trigger omni-completion
+inoremap <C-Space> <C-x><C-o>
