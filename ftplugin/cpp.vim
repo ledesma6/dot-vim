@@ -1,6 +1,9 @@
 " ~/.vim/ftplugin/cpp.vim
 " buffer configuration for C++
 
+"enable omni completion for C++
+setlocal omnifunc=ccomplete#Complete
+
 " --- File-Local Autocmds (Optional) ---
 " augroup <Language>AutoX
 "   autocmd! * <buffer>

@@ -1,6 +1,9 @@
 " ~/.vim/ftplugin/FILETYPE.vim
 " buffer configuration for FILETYPE
 
+" enable omni completion for this filetype
+setlocal omnifunc=...
+
 " --- File-Local Autocmds (Optional) ---
 " augroup <Language>AutoX
 "   autocmd! * <buffer>
@@ -27,6 +30,7 @@ let b:formatprg = '...'
 
 " --- Buffer Cleanup on Filetype Switch ---
 let b:undo_ftplugin = get(b:, 'undo_ftplugin', '')
+  \ . '| setlocal omnifunc<'
   \ . '| setlocal errorformat<'
   \ . '| unlet! b:makeprg b:lintprg b:testprg b:formatprg'
 

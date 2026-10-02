@@ -7,11 +7,20 @@ set incsearch               " Search as you type
 set ignorecase              " Ignore case when searching...
 set smartcase               " ...unless capital letters are used
 
+" --- NERDTree settings
+
 " load NERDTree when vim is launched
-autocmd VimEnter * NERDTree " load NERDTree when vim is launched
+autocmd VimEnter * NERDTree 
 
 " toggle NERDTree using Ctrl + n
 nnoremap <C-n> :NERDTreeToggle<CR> 
+
+" --- gutentags settings
+
+" notification to know when gutentags is gutentagging
+set statusline+=%{gutentags#statusline()} 
+
+" --- ftplugin setup
 
 " apply a pre-configured template to the buffer when a adding a .vim file to
 " ftplugin/
@@ -41,7 +50,6 @@ function! RunTask(var_name, ...)
 	endif
 endfunction
 
-
 " --- Global Key Mappings ---
 " <Leader>b  -> Build / Compile / Syntax Check
 " <Leader>l  -> Lint / Static Analysis
@@ -53,3 +61,9 @@ nnoremap <Leader>l :call RunTask('lintprg', 1)<CR>
 nnoremap <Leader>t :call RunTask('testprg', 1)<CR>
 nnoremap <Leader>f :call RunTask('formatprg', 0)<CR>
 
+autocmd  BufWinLeave * if &buftype==# 'quickfix' | echo "don't give up, skeleton" | endif
+
+" --- Omni completion settings
+
+" remap Ctrl + Space in Insert mode to trigger omni-completion
+inoremap <C-Space> <C-x><C-o>
