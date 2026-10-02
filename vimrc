@@ -7,11 +7,20 @@ set incsearch               " Search as you type
 set ignorecase              " Ignore case when searching...
 set smartcase               " ...unless capital letters are used
 
+" --- NERDTree settings
+
 " load NERDTree when vim is launched
-autocmd VimEnter * NERDTree " load NERDTree when vim is launched
+autocmd VimEnter * NERDTree 
 
 " toggle NERDTree using Ctrl + n
 nnoremap <C-n> :NERDTreeToggle<CR> 
+
+" --- gutentags settings
+
+" notification to know when gutentags is gutentagging
+set statusline+=%{gutentags#statusline()} 
+
+" --- ftplugin setup
 
 " apply a pre-configured template to the buffer when a adding a .vim file to
 " ftplugin/
