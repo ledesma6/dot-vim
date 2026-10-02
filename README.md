@@ -28,11 +28,11 @@ source ~/.vim/vimrc
 Plugins are managed using **Vim 8's native package manager** (`pack/`) combined with **Git Submodules**.
 
 Packages fall into two categories depending on when and how they are loaded:
-
+```
 ~/.vim/pack/vendor/
 ├── start/   # Loaded automatically on Vim startup
 └── opt/     # Loaded on demand using :packadd
-
+```
 ### Automatic Loading (`start/`)
 
 Plugins in `pack/vendor/start/` are automatically added to Vim's `'runtimepath'` (`rtp`) at launch. Any scripts in `plugin/` or `ftplugin/` execute right away.
