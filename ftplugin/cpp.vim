@@ -26,7 +26,7 @@ compiler gcc
 let b:makeprg = 'cmake --build build'
 let b:lintprg = 'cppcheck --enable=warning,style --template=gcc %'
 let b:testprg = 'ctest --test-dir build --output-on-failure'
-let b:formatprg = 'clang-format -i %'
+let b:formatprg = 'clang-format --assume-filename=%'
 
 " --- Buffer Cleanup on Filetype Switch ---
 let b:undo_ftplugin = get(b:, 'undo_ftplugin', '')
