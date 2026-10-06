@@ -59,7 +59,7 @@ endfunction
 nnoremap <Leader>b :call RunTask('makeprg', 1)<CR>
 nnoremap <Leader>l :call RunTask('lintprg', 1)<CR>
 nnoremap <Leader>t :call RunTask('testprg', 1)<CR>
-nnoremap <Leader>f :call RunTask('formatprg', 0)<CR>
+nnoremap <Leader>f gggqG
 
 autocmd  BufWinLeave * if &buftype==# 'quickfix' | echo "don't give up, skeleton" | endif
 
