@@ -1,5 +1,5 @@
 # dot-vim
-A basic vim 8+ configuration.
+A vim 8+ configuration focused on standard key mappings and simplified filetype customization.
 
 ---
 
