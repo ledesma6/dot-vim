@@ -30,6 +30,7 @@ let b:formatprg = 'clang-format --assume-filename=%'
 
 " --- Buffer Cleanup on Filetype Switch ---
 let b:undo_ftplugin = get(b:, 'undo_ftplugin', '')
+  \.  '| setlocal omnifunc<'
   \ . '| setlocal errorformat<'
   \ . '| unlet! b:makeprg b:lintprg b:testprg b:formatprg'
 

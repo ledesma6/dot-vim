@@ -41,9 +41,14 @@ function! RunTask(var_name, ...)
 	
 	if l:use_qf
 		let &l:makeprg = expandcmd(l:cmd)
-		silent make
+		silent make!
 		redraw!
 		cwindow
+		if len(getqflist()) == 0 && v:shell_error == 0
+			echo "nothing to see here... for now."
+		else
+			botright copen 8
+		endif
 	else
 		execute '!' . expandcmd(l:cmd)
 		edit!
@@ -59,7 +64,7 @@ endfunction
 nnoremap <Leader>b :call RunTask('makeprg', 1)<CR>
 nnoremap <Leader>l :call RunTask('lintprg', 1)<CR>
 nnoremap <Leader>t :call RunTask('testprg', 1)<CR>
-nnoremap <Leader>f gggqG
+nnoremap <Leader>f :call RunTask('formatprg', 0)<CR>
 
 autocmd  BufWinLeave * if &buftype==# 'quickfix' | echo "don't give up, skeleton" | endif
 
